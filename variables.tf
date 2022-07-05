@@ -1,3 +1,7 @@
+provider "aws" {
+  region      = "us-east-1"
+}
+
 variable "prefix" {
   default     = "airgap-eks"
   description = "Common AWS Resource prefix"
@@ -20,7 +24,7 @@ variable "ssm_prefix" {
 
 variable "cust_name" {
      description = "Customer short name prefix"
-     default = "FayBay"
+     default = "zerotouch"
    }
 variable "region_role" {
    default     = "Pri"
