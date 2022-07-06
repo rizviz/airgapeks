@@ -1,7 +1,3 @@
-provider "aws" {
-  region      = "us-east-1"
-}
-
 variable "prefix" {
   default     = "airgap-eks"
   description = "Common AWS Resource prefix"
@@ -22,20 +18,7 @@ variable "ssm_prefix" {
   description = "prefix for SSM"
 }
 
-variable "cust_name" {
-     description = "Customer short name prefix"
-     default = "zerotouch"
-   }
-variable "region_role" {
-   default     = "Pri"
-   description = "AWS Region Role Pri or Secondary"
- }
+variable "common_tags" {
+  default     = "rossove"
 
-
-
-locals {
-   common_tags = {
-     Project   = "AirGapcloud"
-     ManagedBy = "Rossove.com TF"
-   }
- }
+}
